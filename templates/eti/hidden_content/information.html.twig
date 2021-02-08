@@ -1,0 +1,18 @@
+{% extends 'eti/blog/layout.html.twig' %}
+
+
+{% block content %}
+    <p> Your information </p>
+    <div>
+        <p>E-mail<br />
+            {{ user.email }}</p>
+    </div>
+    <div>
+        <p>Name<br />
+            {{ userName }}</p>
+    </div>
+    <div>
+        <p>Last name<br />
+            {{ userLastName }}</p>
+    </div>
+{% endblock %}

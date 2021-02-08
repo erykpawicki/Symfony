@@ -1,0 +1,116 @@
+{# templates/blog/layout.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1></h1>
+
+    {% block content %}{% endblock %}
+
+
+
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <style>
+        body, html {height: 100%}
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+        .menu {display: none}
+        .bgimg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+        }
+    </style>
+
+{% endblock %}
+
+
+
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+    <div class="w3-content">
+
+        <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Dodane</h1>
+        <div class="w3-row w3-center w3-border w3-border-dark-grey">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Sample');" id="myLink">
+                <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Sample</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Utwory');">
+                <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Utwory</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Nowe');">
+                <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Nowe</div>
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+        <div id="Nowe" class="w3-container menu w3-padding-32 w3-white">
+
+
+        </div>
+
+        <!-- About Container -->
+        <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+            <div class="w3-content">
+                <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+                <p></p>
+                <p><strong></strong> <img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt=""></p>
+                <p></p>
+                <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="">
+                <h1><b></b></h1>
+
+
+
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+            <div class="w3-content">
+                <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Kontakt</h1>
+                <p>Zadzwoń do nas 1234566789</p>
+                <p><span class="w3-tag"></span> </p>
+                <p class="w3-xxlarge"><strong>Reserve</strong> </p>
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+                    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+                    <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+            // Tabbed Menu
+            function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-red";
+            }
+            document.getElementById("myLink").click();
+        </script>
+
+
+        {% endblock %}
+
+
+
+
+

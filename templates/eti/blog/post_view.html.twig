@@ -1,0 +1,28 @@
+{# templates/blog/first_page.html.twig #}
+{% extends 'eti/blog/layout.html.twig' %}
+
+{% block title %}Blog Index / Articles to read{% endblock %}
+
+{% block content %}
+    <p> Title: </p>
+
+    <ul>
+        {{ articles.title }}
+    </ul>
+    <p> Summary: </p>
+
+    <ul>
+        {{ articles.summary }}
+    </ul>
+    <p> Content: </p>
+
+    <ul>
+        {{ articles.content }}
+    </ul>
+    <p> Content: </p>
+
+{#    <ul>#}
+{#        {{ form(form) }}#}
+{#    </ul>#}
+
+{% endblock %}
